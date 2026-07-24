@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+gifs/*
+!gifs/.gitkeep
+output/*
+!output/.gitkeep
+cache/*
+!cache/.gitkeep

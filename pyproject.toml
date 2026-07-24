@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-sticker-maker"
+version = "1.0.0"
+description = "High-quality animated Telegram sticker converter"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "colorama>=0.4.6,<1",
+    "numpy>=1.26,<3",
+    "Pillow>=10.2,<13",
+    "tqdm>=4.66,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=5,<8", "ruff>=0.11,<1"]
+
+[project.scripts]
+sticker-maker = "sticker_maker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sticker_maker*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.coverage.run]
+source = ["sticker_maker"]
+branch = true

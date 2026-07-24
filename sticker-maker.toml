@@ -1,0 +1,31 @@
+[platform]
+name = "telegram"
+width = 512
+height = 512
+fps = 30.0
+max_duration = 3.0
+max_size_kib = 256
+codec = "libvpx-vp9"
+pixel_format = "yuva420p"
+
+[crop]
+zoom = "auto"
+padding_ratio = 0.015
+fill_ratio = 0.97
+alpha_threshold = 8
+background_threshold = 24.0
+
+[encoding]
+quality = "best"
+min_bitrate_kbps = 24
+max_bitrate_kbps = 5000
+search_iterations = 11
+size_tolerance_bytes = 768
+unsharp_amount = 0.35
+
+[runtime]
+workers = "auto"
+threads = 0
+overwrite = false
+cache_enabled = true
+verbose = false
